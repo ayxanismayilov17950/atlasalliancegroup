@@ -160,7 +160,9 @@ footer {
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-
+.menu-toggle {
+  display: none; /* Hidden on desktop */
+}
 .stat h3 {
   color: #0a3d62;
   font-size: 2rem;

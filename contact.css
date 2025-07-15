@@ -154,6 +154,11 @@
     opacity: 1;
     transform: translateY(0);
   }
+   
+  .menu-toggle {
+    display: none;
+  }
+  
   @media (max-width: 768px) {
     .nav-container {
       flex-direction: column;
@@ -204,8 +209,4 @@
       font-size: 0.9rem;
     }
   }
-  
-  .menu-toggle {
-    display: none;
-  }
-  
+ 
