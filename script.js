@@ -48,3 +48,8 @@ window.addEventListener('load', () => {
   animateValue('clients', 60);
   animateValue('projects', 120);
 });
+
+function toggleMenu() {
+  const nav = document.getElementById('navLinks');
+  nav.classList.toggle('active');
+}
