@@ -270,4 +270,11 @@ footer {
   .nav-links.active {
     display: flex;
   }
+  .contact-cta {
+    max-width: 90%;
+    left: 5%;
+    right: auto;
+    bottom: 1rem;
+    padding: 1rem;
+  }
 }
