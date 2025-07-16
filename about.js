@@ -25,16 +25,23 @@ document.querySelectorAll('.clickable-cert').forEach(img => {
     modal.addEventListener('click', () => modal.remove());
   });
 });
-// Counter animation
-function animateValue(id, end, duration = 2000) {
+function animateValue(id, end, duration = 2000, fps = 60) {
   const el = document.getElementById(id);
   let start = 0;
-  const stepTime = Math.abs(Math.floor(duration / end));
+  const frameDuration = 1000 / fps;
+  const totalFrames = Math.round(duration / frameDuration);
+  const increment = end / totalFrames;
+
+  let frame = 0;
   const timer = setInterval(() => {
-    start++;
-    el.textContent = start;
-    if (start === end) clearInterval(timer);
-  }, stepTime);
+    frame++;
+    start += increment;
+    el.textContent = Math.round(start);
+    if (frame >= totalFrames) {
+      clearInterval(timer);
+      el.textContent = end; // Ensure final value is exact
+    }
+  }, frameDuration);
 }
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -42,6 +49,7 @@ window.addEventListener('DOMContentLoaded', () => {
   animateValue('clients', 75);
   animateValue('projects', 120);
 });
+
 function toggleMenu() {
   const nav = document.getElementById('navLinks');
   nav.classList.toggle('active');
