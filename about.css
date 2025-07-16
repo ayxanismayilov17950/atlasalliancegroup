@@ -11,6 +11,8 @@ body {
   background-color: #f9f9f9;
   color: #333;
   scroll-behavior: smooth;
+  padding-bottom: 140px; /* ensures space below content for the CTA */
+
 }
 
 .navbar {
@@ -179,11 +181,17 @@ footer {
 .stat {
   flex: 1 1 100px;
   min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .stat h3 {
   color: #0a3d62;
   font-size: 2rem;
+  margin-bottom: 0.5rem; /* ADD THIS TO SEPARATE h3 FROM p */
 }
+
 .menu-toggle {
   display: none; /* hide on desktop */
   background: none;
@@ -223,15 +231,20 @@ footer {
 }
 .contact-cta {
   position: fixed;
-  bottom: 1rem;
+  bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
-  max-width: 90%;
-  padding: 1rem;
+  background: #0a3d62;
+  color: white;
+  padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   z-index: 9999;
+  max-width: 90%;
+  width: calc(100% - 2rem);
+  box-sizing: border-box;
 }
+
 
 .contact-cta h2 {
   font-size: 1.2rem;
