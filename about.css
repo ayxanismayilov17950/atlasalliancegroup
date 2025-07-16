@@ -102,6 +102,19 @@ main {
   padding: 1.5rem;
   text-align: center;
 }
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url('images/ship-bg.jpg') no-repeat center center / cover;
+  opacity: 0.19; /* Subtle, non-distracting */
+  z-index: -1;
+  pointer-events: none; /* Prevent interaction */
+  filter: brightness(80%) contrast(120%);
+}
 
 .certificate-card img {
   max-width: 100%;
