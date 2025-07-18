@@ -12,10 +12,33 @@ body {
 }
 
 .hero-section {
-  background: linear-gradient(to right, #0a3d62, #1e5799);
-  color: white;
+  background-image: url('images/company_logo.png');
+  background-size: auto 100%; /* Only scale height */
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   text-align: center;
-  padding: 5rem 1rem;
+  padding: 8rem 1rem; /* Increased vertical padding */
+  color: white;
+  min-height: 400px; /* Optional: for consistent height */
+  overflow: hidden;
+}
+
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* dark overlay for readability */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-content h1 {
@@ -79,6 +102,7 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
 .navbar {
   background-color: #0a3d62;
   padding: 1rem 2rem;
@@ -119,6 +143,7 @@ footer {
 .nav-links a:hover {
   color: #f1c40f;
 }
+
 .services-section {
   padding: 4rem 2rem;
   text-align: center;
@@ -156,6 +181,7 @@ footer {
   color: #0a3d62;
   margin-bottom: 1rem;
 }
+
 .stats-section {
   background: #0a3d62;
   color: white;
@@ -174,6 +200,7 @@ footer {
 .stat p {
   font-size: 1rem;
 }
+
 .contact-cta {
   position: fixed;
   bottom: 2rem;
@@ -207,6 +234,7 @@ footer {
   text-decoration: none;
   border-radius: 5px;
 }
+
 .menu-toggle {
   display: none; /* Hidden on desktop */
 }
@@ -295,13 +323,14 @@ footer {
   border-radius: 5px;
   font-weight: 600;
 }
+
 .about {
   max-width: 800px;
   margin: 50px auto;
   padding: 30px;
-  background-color: #f9f9f9; /* Yumşaq fon */
-  border-radius: 16px; /* Küncləri yuvarlaqlaşdır */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Kölgə effekti */
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 18px;
   line-height: 1.8;
@@ -310,10 +339,10 @@ footer {
 }
 
 .about:hover {
-  transform: translateY(-5px); /* Hover effekti ilə yüngül yuxarı qalxma */
+  transform: translateY(-5px);
 }
 
-/* Fade-in animasiyası */
+/* Fade-in animation */
 .fade-in {
   opacity: 0;
   animation: fadeIn 1.2s ease forwards;
@@ -325,7 +354,7 @@ footer {
   }
 }
 
-/* Responsivlik üçün */
+/* Responsive tweaks */
 @media (max-width: 600px) {
   .about {
     padding: 20px;
